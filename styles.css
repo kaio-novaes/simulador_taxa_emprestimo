@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Evita barras de rolagem se o conteúdo exceder a altura da tela */
+}
+
+.container {
+    width: 100%;
+    max-width: 900px; /* Manter o tamanho máximo do container */
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px; /* Espaçamento menor embaixo */
+    font-size: 26px; /* Fonte um pouco menor */
+    font-weight: 600; /* Peso de fonte moderado */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Coluna em telas menores */
+    gap: 15px;
+}
+
+@media(min-width: 768px) {
+    .content {
+        flex-direction: row; /* Flex row em telas maiores */
+    }
+}
+
+.form-container, .results-container {
+    flex: 1; /* Usa espaço disponível de forma flexível */
+    background: #fafafa; /* Cor de fundo suave */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    border: 1px solid #e0e0e0; /* Borda leve */
+}
+
+.form-group {
+    margin-bottom: 12px; /* Espaçamento menor entre campos */
+}
+
+label {
+    display: block;
+    margin-bottom: 6px; /* Mais espaçamento abaixo do rótulo */
+    font-weight: 550; /* Peso de fonte moderado */
+    color: #444; /* Cor um pouco mais escura para contraste */
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px; /* Padding ajustado para campos */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Espaçamento ajustado entre botões */
+    justify-content: flex-end; /* Alinhamento dos botões à direita */
+}
+
+button {
+    flex: 1;
+    padding: 12px; /* Padding ajustado para botões */
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição de cor e transformação */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+}
+
+button[type="button"] {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button[type="button"]:hover {
+    background-color: #c82333;
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+}
+
+#results {
+    margin-top: 15px;
+}
+
+.result-item {
+    margin-bottom: 12px; /* Espaço aumentado abaixo de cada resultado para melhor separação */
+    padding: 15px; /* Padding aumentado para mais conforto no conteúdo */
+    border: 1px solid #e0e0e0; /* Borda muito leve para um toque mais sutil */
+    border-radius: 8px; /* Bordas mais arredondadas para um visual mais suave */
+    background-color: #ffffff; /* Cor de fundo neutra para maior contraste e clareza */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra leve para destacar o item */
+    transition: box-shadow 0.2s ease; /* Transição suave para efeitos de foco */
+}
+
+.result-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais forte ao passar o mouse para um efeito de destaque */
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Taxa de Juros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CALCULADORA DE TAXA DE JUROS PARA EMPRÉSTIMO</h1>
+        <div class="content">
+            <div class="form-container">
+                <form id="loanForm">
+                    <div class="form-group">
+                        <label for="dataInicio">Data de início desconto:</label>
+                        <input type="text" id="dataInicio" placeholder="MM/AAAA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="valorParcela">Valor da parcela (R$):</label>
+                        <input type="number" id="valorParcela" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="valorEmprestado">Valor total emprestado (R$):</label>
+                        <input type="number" id="valorEmprestado" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numParcelas">Quantidade de parcelas:</label>
+                        <input type="number" id="numParcelas" required>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit">Calcular</button>
+                        <button type="button" id="clearButton">Limpar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="results-container">
+                <div id="results">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
