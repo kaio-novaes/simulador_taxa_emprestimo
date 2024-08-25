@@ -1,5 +1,5 @@
-# Calculadora de Taxa de Juros para Empréstimos
-Esta calculadora permite calcular a taxa de juros mensal e anual para empréstimos com base em informações fornecidas sobre parcelas e valor emprestado. Também calcula o saldo restante do empréstimo.
+# Simulador de Taxa de Juros para Empréstimos
+Permite simular a taxa de juros mensal e anual para empréstimos com base em informações fornecidas sobre parcelas e valor emprestado. Também calcula o saldo restante do empréstimo.
 
 ## Funcionalidades
 #### Cálculo da Taxa de Juros: 
