@@ -10,11 +10,11 @@ Formatação Monetária: Exibe valores em formato brasileiro.
 Validação e Máscara de Entrada: Garante a validade dos dados e formata datas.
 
 ## Arquivos
-#### index.html: 
+#### **`index.html:`** 
 Estrutura HTML da interface.
-#### styles.css: 
+#### **`styles.css:`** 
 Estilos para o layout.
-#### script.js: 
+#### **`script.js:`**  
 Lógica de cálculo e interação.
 
 ## Uso
