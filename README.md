@@ -1,5 +1,5 @@
 # Simulador de Taxa de Juros para Empréstimos
-Permite simular a taxa de juros mensal e anual para empréstimos com base em informações fornecidas sobre parcelas e valor emprestado. Também calcula o saldo restante do empréstimo.
+Com base nas informações fornecidas pelo usuário, como o valor das parcelas, a quantidade de parcelas e o valor total emprestado, o simulador calcula a taxa de juros mensal e anual do empréstimo e exibe o saldo restante a ser pago.
 
 # Link: 
 [Simulador taxa de emprestimo](https://kaio-novaes.github.io/simulador_taxa_emprestimo/)
