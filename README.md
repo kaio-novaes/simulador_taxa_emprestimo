@@ -26,4 +26,4 @@ Clique em "Calcular" para obter os resultados.
 Clique em "Limpar" para resetar o formulário.
 
 ## Contribuições
-Contribuições são bem-vindas! Se você encontrar um bug ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contribuições são bem-vindas! Se você encontrar um bug ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue.
