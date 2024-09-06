@@ -11,6 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
         return `R$ ${valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     };
 
+    // Função para formatar entrada monetária para exibição
+    const aplicarMascaraMoeda = (valor) => {
+        const valorNumerico = parseFloat(valor.replace(/\D/g, '')) / 100;
+        return formatarMoeda(valorNumerico);
+    };
+
+    // Função para atualizar o valor do campo com a máscara aplicada
+    const atualizarCampoComMascara = (event) => {
+        const campo = event.target;
+        const valorOriginal = campo.value.replace(/\D/g, '');
+        campo.value = aplicarMascaraMoeda(valorOriginal);
+    };
+
+    // Função para extrair valor numérico de um campo com máscara
+    const extrairValorNumerico = (valor) => {
+        return parseFloat(valor.replace('R$ ', '').replace('.', '').replace(',', '.'));
+    };
+
     // Função para calcular a quantidade de meses entre duas datas
     const calcularMesesEntreDatas = (dataInicio, dataFim) => {
         const anoInicio = dataInicio.getFullYear();
@@ -93,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para validar entradas do formulário
     const validarFormulario = () => {
         const dataInicioStr = document.getElementById('dataInicio').value;
-        const valorParcela = parseFloat(document.getElementById('valorParcela').value.replace(',', '.'));
-        const valorEmprestado = parseFloat(document.getElementById('valorEmprestado').value.replace(',', '.'));
+        const valorParcela = extrairValorNumerico(document.getElementById('valorParcela').value);
+        const valorEmprestado = extrairValorNumerico(document.getElementById('valorEmprestado').value);
         const numParcelas = parseInt(document.getElementById('numParcelas').value, 10);
 
         if (!dataInicioStr || isNaN(valorParcela) || isNaN(valorEmprestado) || isNaN(numParcelas) || valorParcela <= 0 || valorEmprestado <= 0 || numParcelas <= 0) {
@@ -116,6 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('input', (event) => {
         if (event.target.id === 'dataInicio') {
             aplicarMascaraData(event);
+        } else if (event.target.id === 'valorParcela' || event.target.id === 'valorEmprestado') {
+            atualizarCampoComMascara(event);
         }
     });
 
