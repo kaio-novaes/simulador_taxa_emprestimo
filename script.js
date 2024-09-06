@@ -77,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
         const mesesTotais = calcularMesesEntreDatas(dataInicio, mesCompleto);
         const parcelasPagas = Math.min(mesesTotais, numParcelas);
+
+        if (valorParcela > valorEmprestado) {
+            throw new Error('Não foi possível calcular a taxa de juros, pois o <strong>valor da parcela é superior ao valor total emprestado</strong>. Tente novamente.');
+        }
     
         try {
             const taxaJurosMensal = buscarTaxaJuros(valorParcela, numParcelas, valorEmprestado);
@@ -150,20 +154,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const { dataInicio, valorEmprestado, valorParcela, numParcelas } = resultadoValidacao;
-        const resultado = calcularTaxaJuros(dataInicio, valorEmprestado, valorParcela, numParcelas);
+        try {
+            const resultado = calcularTaxaJuros(dataInicio, valorEmprestado, valorParcela, numParcelas);
 
-        if (resultado) {
-            resultsContainer.innerHTML = `
-                <div class="result-item">Parcelas pagas até o momento: <strong>${resultado.parcelasPagas}</strong></div>
-                <div class="result-item">Parcelas restantes a pagar: <strong>${resultado.parcelasAPagar}</strong></div>
-                <div class="result-item">Taxa de juros atual:
-                    <strong>${resultado.taxaJurosMensal.toFixed(2)}%</strong> a.m,
-                    <strong>${resultado.taxaJurosAnual.toFixed(2)}%</strong> a.a
-                </div>
-                <div class="result-item">Saldo restante: <strong>${formatarMoeda(resultado.saldoRestante)}</strong></div>
-            `;
-        } else {
-            resultsContainer.innerHTML = '<div class="result-item">Não foi possível calcular a taxa de juros. Tente novamente.</div>';
+            if (resultado) {
+                resultsContainer.innerHTML = `
+                    <div class="result-item">Parcelas pagas até o momento: <strong>${resultado.parcelasPagas}</strong></div>
+                    <div class="result-item">Parcelas restantes a pagar: <strong>${resultado.parcelasAPagar}</strong></div>
+                    <div class="result-item">Taxa de juros atual:
+                        <strong>${resultado.taxaJurosMensal.toFixed(2)}%</strong> a.m,
+                        <strong>${resultado.taxaJurosAnual.toFixed(2)}%</strong> a.a
+                    </div>
+                    <div class="result-item">Saldo restante: <strong>${formatarMoeda(resultado.saldoRestante)}</strong></div>
+                `;
+            } else {
+                resultsContainer.innerHTML = '<div class="result-item">Não foi possível calcular a taxa de juros. Tente novamente.</div>';
+            }
+        } catch (e) {
+            resultsContainer.innerHTML = `<div class="result-item">${e.message}</div>`;
         }
     });
 
