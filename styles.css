@@ -25,7 +25,7 @@ body {
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 15px; /* Espaçamento menor embaixo */
+    margin-bottom: 30px; /* Espaçamento menor embaixo */
     font-size: 26px; /* Fonte um pouco menor */
     font-weight: 600; /* Peso de fonte moderado */
 }
