@@ -51,23 +51,23 @@ header {
 /* Ajuste do container principal */
 main.container {
     width: 100%;
-    max-width: 800px; /* Reduzido para 800px */
+    max-width: 900px; /* Manter o tamanho máximo do container */
     background: #fff;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
     border-radius: 10px; /* Bordas arredondadas */
-    padding: 15px; /* Reduzido para 15px */
+    padding: 20px;
     box-sizing: border-box; /* Inclui padding e bordas na largura total */
-    margin-top: 50px; /* Espaçamento abaixo do cabeçalho fixo */
+    margin-top: 80px; /* Espaçamento aumentado abaixo do cabeçalho fixo */
     display: flex;
     flex-direction: column; /* Coluna para conteúdo */
-    gap: 15px; /* Espaçamento ajustado entre containers */
+    gap: 12px; /* Espaçamento entre containers */
 }
 
 h1 {
     text-align: center;
-    color: #444;
+    color: #333;
     margin-bottom: 10px; /* Margem reduzida embaixo do título */
-    font-size: 22px; /* Reduzido para 22px */
+    font-size: 26px; /* Fonte ajustada */
     font-weight: 600; /* Peso de fonte moderado */
 }
 
@@ -79,7 +79,7 @@ h1 {
 }
 
 p {
-    margin-bottom: 5px; /* Reduzido o espaço entre parágrafos */
+    margin-bottom: 3px; /* Reduzido o espaço entre parágrafos */
 }
 
 .social-links-container {
