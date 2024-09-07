@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
@@ -5,10 +7,47 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden; /* Evita barras de rolagem se o conteúdo exceder a altura da tela */
+    flex-direction: column; /* Alinhar conteúdo em coluna */
+    min-height: 100vh; /* Garantir altura mínima de tela */
+    align-items: center; /* Alinhamento horizontal ao centro */
+}
+
+header {
+    width: 100%; /* Largura total do cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    right: 0;
+    z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo ao final do cabeçalho */
+    padding: 10px; /* Padding ao redor da barra de navegação */
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0; /* Remove margens laterais */
+}
+
+.nav-links a {
+    color: #333; /* Cor do ícone */
+    text-decoration: none;
+    font-size: 25px; /* Tamanho do ícone */
+    transition: color 0.3s ease; /* Transição de cor */
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
 }
 
 .container {
@@ -19,21 +58,24 @@ body {
     border-radius: 10px; /* Bordas arredondadas */
     padding: 20px;
     box-sizing: border-box; /* Inclui padding e bordas na largura total */
-    margin: 20px;
+    margin-top: 80px; /* Espaçamento aumentado abaixo do cabeçalho fixo */
+    display: flex;
+    flex-direction: column; /* Coluna para conteúdo */
+    gap: 12px; /* Espaçamento entre containers */
 }
 
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 30px; /* Espaçamento menor embaixo */
-    font-size: 26px; /* Fonte um pouco menor */
+    margin-bottom: 10px; /* Margem reduzida embaixo do título */
+    font-size: 26px; /* Fonte ajustada */
     font-weight: 600; /* Peso de fonte moderado */
 }
 
 .content {
     display: flex;
     flex-direction: column; /* Coluna em telas menores */
-    gap: 15px;
+    gap: 15px; /* Espaçamento ajustado entre containers */
 }
 
 @media(min-width: 768px) {
@@ -51,8 +93,16 @@ h1 {
     border: 1px solid #e0e0e0; /* Borda leve */
 }
 
+.form-container {
+    margin-top: 10px; /* Espaçamento reduzido acima dos resultados */
+}
+
+.results-container {
+    margin-top: 10px; /* Espaçamento reduzido acima dos resultados */
+}
+
 .form-group {
-    margin-bottom: 12px; /* Espaçamento menor entre campos */
+    margin-bottom: 12px; /* Espaçamento ajustado entre campos */
 }
 
 label {
@@ -109,19 +159,19 @@ button[type="button"]:hover {
 }
 
 #results {
-    margin-top: 15px;
+    margin-top: 10px; /* Espaçamento reduzido acima dos resultados */
 }
 
 .result-item {
-    margin-bottom: 12px; /* Espaço aumentado abaixo de cada resultado para melhor separação */
-    padding: 15px; /* Padding aumentado para mais conforto no conteúdo */
-    border: 1px solid #e0e0e0; /* Borda muito leve para um toque mais sutil */
-    border-radius: 8px; /* Bordas mais arredondadas para um visual mais suave */
-    background-color: #ffffff; /* Cor de fundo neutra para maior contraste e clareza */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra leve para destacar o item */
-    transition: box-shadow 0.2s ease; /* Transição suave para efeitos de foco */
+    margin-bottom: 15px; /* Espaço aumentado abaixo de cada resultado */
+    padding: 15px; /* Padding aumentado */
+    border: 1px solid #e0e0e0; /* Borda leve */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Cor de fundo neutra */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra leve */
+    transition: box-shadow 0.2s ease; /* Transição suave */
 }
 
 .result-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais forte ao passar o mouse para um efeito de destaque */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada ao passar o mouse */
 }

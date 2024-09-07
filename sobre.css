@@ -1,0 +1,80 @@
+/* about.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Alinhar conteúdo em coluna */
+    min-height: 100vh; /* Garantir altura mínima de tela */
+    align-items: center; /* Alinhamento horizontal ao centro */
+}
+
+header {
+    width: 100%; /* Largura total do cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    right: 0;
+    z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo ao final do cabeçalho */
+    padding: 10px; /* Padding ao redor da barra de navegação */
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0; /* Remove margens laterais */
+}
+
+.nav-links a {
+    color: #333; /* Cor do ícone */
+    text-decoration: none;
+    font-size: 25px; /* Tamanho do ícone */
+    transition: color 0.3s ease; /* Transição de cor */
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+main.container {
+    width: 100%;
+    max-width: 900px; /* Manter o tamanho máximo do container */
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+    margin-top: 80px; /* Espaçamento abaixo do cabeçalho fixo */
+    display: flex;
+    flex-direction: column; /* Coluna para conteúdo */
+    gap: 12px; /* Espaçamento entre containers */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px; /* Margem reduzida embaixo do título */
+    font-size: 24px; /* Fonte ajustada */
+    font-weight: 600; /* Peso de fonte moderado */
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
