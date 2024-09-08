@@ -57,7 +57,7 @@ main.container {
     border-radius: 10px; /* Bordas arredondadas */
     padding: 20px;
     box-sizing: border-box; /* Inclui padding e bordas na largura total */
-    margin-top: 80px; /* Espaçamento aumentado abaixo do cabeçalho fixo */
+    margin-top: 70px; /* Espaçamento aumentado abaixo do cabeçalho fixo */
     display: flex;
     flex-direction: column; /* Coluna para conteúdo */
     gap: 12px; /* Espaçamento entre containers */
@@ -73,7 +73,7 @@ h1 {
 
 .central-image {
     display: block;
-    margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona margem acima e abaixo */
+    margin: 10px auto; /* Centraliza a imagem horizontalmente e adiciona margem acima e abaixo */
     max-width: 20%; 
     height: auto; /* Mantém a proporção da imagem */
 }
