@@ -11,19 +11,28 @@ body {
 }
 
 header {
-    width: 100%; /* Largura total do cabeçalho */
-    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%;
+    position: fixed;
     top: 0;
     right: 0;
-    z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+    z-index: 1000;
     display: flex;
-    justify-content: flex-end; /* Alinha o conteúdo ao final do cabeçalho */
-    padding: 10px; /* Padding ao redor da barra de navegação */
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.header-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    order: 2;
 }
 
 .navbar {
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
+    align-items: center;
 }
 
 .nav-links {
@@ -31,23 +40,28 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
+    gap: 20px;
 }
 
 .nav-links li {
-    margin: 0; /* Remove margens laterais */
+    margin: 0;
 }
 
 .nav-links a {
-    color: #333; /* Cor do ícone */
+    color: #333;
     text-decoration: none;
-    font-size: 25px; /* Reduzido para 20px */
-    transition: color 0.3s ease; /* Transição de cor */
+    font-size: 25px;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
-.nav-links a:hover {
-    color: #007bff; /* Cor ao passar o mouse */
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #007bff;
+    background-color: #f0f8ff;
+    transform: translateY(-2px);
 }
-
 /* Ajuste do container principal */
 main.container {
     width: 100%;
@@ -57,7 +71,7 @@ main.container {
     border-radius: 10px; /* Bordas arredondadas */
     padding: 20px;
     box-sizing: border-box; /* Inclui padding e bordas na largura total */
-    margin-top: 70px; /* Espaçamento aumentado abaixo do cabeçalho fixo */
+    margin-top: 55px; /* Espaçamento aumentado abaixo do cabeçalho fixo */
     display: flex;
     flex-direction: column; /* Coluna para conteúdo */
     gap: 12px; /* Espaçamento entre containers */
