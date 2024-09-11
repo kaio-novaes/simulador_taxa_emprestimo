@@ -2,7 +2,7 @@
 Com base nas informações fornecidas pelo usuário, como o valor das parcelas, a quantidade de parcelas e o valor total emprestado, o simulador calcula a taxa de juros mensal e anual do empréstimo e exibe o saldo restante a ser pago.
 
 # Link: 
-[Simulador taxa de emprestimo](https://kaio-novaes.github.io/simulador_taxa_emprestimo/)
+[Simulador | Emprestimo](https://kaio-novaes.github.io/simulador_taxa_emprestimo/)
 
 ## Funcionalidades
 #### Cálculo da Taxa de Juros: 
